@@ -3,4 +3,5 @@ import java.util.List;
 
 public interface ToLetterMapper {
     List<String> toLetterMapper(String num);
+    String toNumMapper(String num);
 }

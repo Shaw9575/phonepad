@@ -12,6 +12,7 @@ public class ToLetterMapperServiceImpl implements ToLetterMapperService {
     @Autowired
     private ToLetterMapper toLetterMapper;
 
+
     @Override
     public List<String> ToLetterMapper(String num) {
         if (num.matches("[0-9]+")) {
@@ -20,6 +21,11 @@ public class ToLetterMapperServiceImpl implements ToLetterMapperService {
         } else {
             throw new ArithmeticException("Invalid telephone numbers. Must be all digits");
         }
+    }
+
+    @Override
+    public String ToNumMapper(String num) {
+        return toLetterMapper.toNumMapper(num);
     }
 }
 
