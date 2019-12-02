@@ -66,10 +66,8 @@ public class MapperImplements implements ToLetterMapper{
                 results.add(outputWords);
             }
         }
-        System.out.println(results);
         List<String> response = new ArrayList<>();
         resultRecur("", 0, response, results);
-        System.out.println(response);
         return response;
     }
 

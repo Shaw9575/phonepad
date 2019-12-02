@@ -14,8 +14,12 @@ public class ToLetterMapperServiceImpl implements ToLetterMapperService {
 
     @Override
     public List<String> ToLetterMapper(String num) {
-        List<String> res = toLetterMapper.toLetterMapper(num);
-        return res;
+        if (num.matches("[0-9]+")) {
+            List<String> res = toLetterMapper.toLetterMapper(num);
+            return res;
+        } else {
+            throw new ArithmeticException("Invalid telephone numbers. Must be all digits");
+        }
     }
 }
 
